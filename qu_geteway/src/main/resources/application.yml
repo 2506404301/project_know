@@ -1,0 +1,54 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: api-geteway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+
+zuul:
+  prefix: /api #路由前缀
+  routes:
+    Item-service: /item/**
+    search-service: /search/**
+    page-server: /page/**
+    user-service: /user/**
+    auth-service: /auth/**
+    cart-service: /cart/**
+    order-service: /order/**
+    upload-service:
+      path: /upload/**
+      serviceId: upload-service
+      strip-prefix: false
+  add-host-header: true #在zuulProperties里面对应addHostHeader;
+  sensitive-headers:
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000 #超长时长
+ribbon:
+  eureka:
+    enabled: true
+  ConnectTimeout: 1000 #ribbon超长时长
+  ReadTimeout: 3500 # ribbon 读取超长时长
+  MaxAutoRetries: 0 #当前服务重试次数
+  MaxAutoRetriesNextServer: 0 #切换服务重试次数 安全问题
+
+qu:
+  jwt:
+    pubKeyPath:  D:/H5XG/file/id_rsa.pub  #公钥地址
+    CookieName:  QU_TOKEN_NAME  #token的名称;
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/check
+      - /api/user/register
+      - /api/item
+      - /api/upload

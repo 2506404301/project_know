@@ -1,0 +1,5 @@
+com_qust\config\GlobalCorsConfig.class
+com_qust\config\FilterProperties.class
+com_qust\config\JwtProperties.class
+com_qust\Filters\AuthFilter.class
+com_qust\quGetaway.class

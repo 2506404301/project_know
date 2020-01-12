@@ -1,0 +1,21 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: auth-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+qu:
+  jwt:
+    secret: qu@login*90|(j+@)|00??up&&!!ppoo  #登录验证的秘钥密文;
+    pubKeyPath:  D:/H5XG/file/id_rsa.pub  #共钥地址;
+    priKeyPath:  D:/H5XG/file/id_rea.pri  #私钥地址;
+    expire: 3000   #过期时间;
+    CookieName: QU_TOKEN_NAME  #token的名称;

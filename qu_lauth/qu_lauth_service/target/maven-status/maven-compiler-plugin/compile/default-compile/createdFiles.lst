@@ -1,0 +1,5 @@
+qu_Item\auth\web\AuthController.class
+qu_Item\quLauthApplication.class
+qu_Item\auth\client\AuthClient.class
+qu_Item\auth\config\JwtProperties.class
+qu_Item\auth\service\AuthService.class

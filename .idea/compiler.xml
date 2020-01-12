@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qu_lauth_common" />
+        <module name="qu_Item_service" />
+        <module name="qu_geteway" />
+        <module name="qu_Item_interface" />
+        <module name="qu_lauth_service" />
+        <module name="qu_user_service" />
+        <module name="qu_register" />
+        <module name="qu_commons" />
+        <module name="qu_pages" />
+        <module name="qu_user_interface" />
+        <module name="qu_order" />
+        <module name="qu_upload" />
+        <module name="qu_cart" />
+        <module name="qu_elasticsearch" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="qu_Item_interface" options="-parameters" />
+      <module name="qu_Item_service" options="-parameters" />
+      <module name="qu_cart" options="-parameters" />
+      <module name="qu_commons" options="-parameters" />
+      <module name="qu_elasticsearch" options="-parameters" />
+      <module name="qu_geteway" options="-parameters" />
+      <module name="qu_lauth_common" options="-parameters" />
+      <module name="qu_lauth_service" options="-parameters" />
+      <module name="qu_order" options="-parameters" />
+      <module name="qu_pages" options="-parameters" />
+      <module name="qu_register" options="-parameters" />
+      <module name="qu_upload" options="-parameters" />
+      <module name="qu_user_interface" options="-parameters" />
+      <module name="qu_user_service" options="-parameters" />
+    </option>
+  </component>
+</project>

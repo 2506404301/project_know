@@ -1,0 +1,32 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/quxg?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+  jackson:
+    default-property-inclusion: non_null #是返回的值没有null;
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+    instance:
+      ip-address: 127.0.0.1
+      prefer-ip-address: true
+mybatis: #mybatis
+  type-aliases-package: qu_Item.order.unity
+
+qu:
+  jwt:
+    pubKeyPath:  D:/H5XG/file/id_rsa.pub  #公钥地址
+    CookieName:  QU_TOKEN_NAME  #token的名称;
+  worked:
+     workerId: 1
+     datacenterId: 1
+
+
+

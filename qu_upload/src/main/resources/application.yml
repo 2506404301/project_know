@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      file-size-threshold: 5MB
+      #限制文件的大小;
+
+#静态资源的地址;
+  resources:
+    static-locations: file:C://Users//dell//Desktop//upload/
+
+#erueka服务;
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+instance:
+  ip-address: 127.0.0.1
+  prefer-ip-address: true
+

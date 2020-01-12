@@ -1,0 +1,21 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: cart-service
+  redis:
+    host: 127.0.0.1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true  #注册127.0.0.1到erueka服务;
+    ip-address: 127.0.0.1
+
+qu:
+  jwt:
+    pubKeyPath:  D:/H5XG/file/id_rsa.pub  #公钥地址
+    CookieName:  QU_TOKEN_NAME  #token的名称;
+
+
